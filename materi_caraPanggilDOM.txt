@@ -1,0 +1,21 @@
+Mencari DOM (Mendapatkan DOM)
+=== mengakses DOM secara umum ===
+- document (kita dapat mengakses keseluruhan konten pada HTML yang terdapat root element <html>)
+- const head = document.head; (kita dapat mengakses keseluruhan konten pada tag <head> saja)
+- const body = document.body; (untuk mengakses keseluruhan konten yang ada pada tag <body> saja)
+=== mengakses DOM secara spesifik ===
+- const gambar = document.getElementById('gambarUtama'); (metode ini berfungsi untuk mendapatkan elemen berdasarkan nilai id-nya)
+- getElementsByName(). CONTOH = document.getElementsByName('button').  FUNGSI = Mengembalikan banyak elemen (HTMLCollection) yang memiliki attribute name dengan nilai "button".
+- getElementsByClassName(). CONTOH = document.getElementsByClassName('button').  FUNGSI = Mengembalikan banyak elemen (HTMLCollection) yang memiliki attribute class dengan nilai "button".
+- getElementsByTagName().  CONTOH = document.getElementsByTagName('div'). FUNGSI = Mengembalikan banyak elemen (HTMLCollection) yang merupakan <div> element.
+- querySelector(). CONTOH = document.querySelector('.button'). FUNGSI = Mengembalikan elemen pertama (node) yang menerapkan class "button".
+- querySelectorAll(). CONTOH = document.querySelectorAll('.button'). FUNGSI = Mengembalikan banyak Node dalam bentuk NodeList yang menerapkan class "button".
+
+Membuat Elemen HTML
+- const newElement = document.createElement('p'); (createElement(). Dengan method ini, kita bisa membuat sebuah elemen HTML yang benar-benar baru tanpa memanipulasi isi konten berkas HTML.)
+  * newElement.innerText = 'Selamat datang ke HTML kosong ini :'; (properti (innerText) ini dapat kita gunakan untuk menbabahkan text ke elemet yg telah kita buat)
+- const newImg = document.createElement('img'); (tapi elemen ini belum sempurna tag img harus ada attribute 'scr', Untuk memberikan atribut src pada elemen <img>, kita bisa memanggil function setAttribute())
+  * newImg.setAttribute('src', 'https://picsum.photos/200/300');  
+
+Mengubah Konten HTML - Menyiapkan Konten
+-
